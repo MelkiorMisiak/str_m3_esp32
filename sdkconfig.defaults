@@ -1,0 +1,19 @@
+# Tick de 1 ms (resolucao de vTaskDelay/escalonamento)
+CONFIG_FREERTOS_HZ=1000
+
+# CPU fixa em 240 MHz, sem gerenciamento de energia (sem DFS / light sleep)
+CONFIG_ESP_DEFAULT_CPU_FREQ_MHZ_240=y
+# CONFIG_PM_ENABLE is not set
+
+# Otimizacao -O2 (reflete melhor o desempenho de producao)
+CONFIG_COMPILER_OPTIMIZATION_PERF=y
+
+# Callbacks de esp_timer executados direto na ISR (carimbo de liberacao exato)
+CONFIG_ESP_TIMER_SUPPORTS_ISR_DISPATCH_METHOD=y
+
+# Console mais rapido: 10.000 linhas de CSV por etapa
+CONFIG_ESP_CONSOLE_UART_BAUDRATE=115200
+
+# Tarefas de teste usam CPU continuamente: nao deixe o watchdog da idle reiniciar
+# CONFIG_ESP_TASK_WDT_CHECK_IDLE_TASK_CPU0 is not set
+# CONFIG_ESP_TASK_WDT_CHECK_IDLE_TASK_CPU1 is not set
