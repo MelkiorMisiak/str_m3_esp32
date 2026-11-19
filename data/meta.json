@@ -1,7 +1,48 @@
 {
-  "summaries": {},
+  "summaries": {
+    "1": {
+      "stage": "1",
+      "n": "10000",
+      "min_us": "6047",
+      "mean_us": "6076",
+      "hwm_us": "6224",
+      "D_us": "7469",
+      "misses": "0",
+      "huff_fail": "0"
+    },
+    "2": {
+      "stage": "2",
+      "n": "2000",
+      "min_us": "6063",
+      "mean_us": "6087",
+      "hwm_us": "6103",
+      "D_us": "7469",
+      "misses": "0",
+      "huff_fail": "0"
+    },
+    "3": {
+      "stage": "3",
+      "n": "5000",
+      "min_us": "6581",
+      "mean_us": "7552",
+      "hwm_us": "8591",
+      "D_us": "7469",
+      "misses": "2802",
+      "huff_fail": "0"
+    },
+    "4": {
+      "stage": "4",
+      "n": "10000",
+      "min_us": "7100",
+      "mean_us": "9010",
+      "hwm_us": "16039",
+      "D_us": "7469",
+      "misses": "8334",
+      "huff_fail": "0"
+    }
+  },
   "target": "esp32",
-  "idf": "v6.1-dev-7651-gc712a0dde38",
+  "idf": "v6.0.2",
   "cores": "2",
   "cpu_mhz": "240",
   "tick_hz": "1000",
@@ -22,5 +63,7 @@
   "sensor": "7000",
   "logger": "13000",
   "burn_iters_per_us": "79",
-  "clock_offset_us": "73154"
+  "clock_offset_us": "71409",
+  "clock_calib_window_us": "2",
+  "D_us": 7469
 }
